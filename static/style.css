@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex; /* Added to center the container */
+    justify-content: center; /* Added to center the container */
+    align-items: center; /* Added to center the container */
+}
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.language-selector button {
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+}
+
+.language-selector .flag {
+    font-size: 1.2em;
+}
+
+.language-selector .lang-name {
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.language-selector button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+h1 {
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-direction: row;
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+button {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#qrResult {
+    text-align: center;
+    padding: 20px;
+}
+
+#qrImage {
+    max-width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#qrImage:hover {
+    transform: scale(1.05);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.copyright .social-links {
+    margin-top: 15px;
+}
+
+.youtube-link, .discord-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 20px;
+}
+
+.youtube-link {
+    color: #FF0000;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.discord-link {
+    color: #7289DA;
+    background-color: rgba(114, 137, 218, 0.1);
+}
+
+.youtube-link:hover, .discord-link:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        /* margin: 10px; Removed to allow centering with body flexbox */
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: center; /* Center items in column */
+    }
+
+    input, button {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #qrImage {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <title>مولد رمز QR للصور</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title"><i class="fas fa-qrcode"></i> مولد رمز QR</h1>
+        
+        <div class="language-selector">
+            <button onclick="changeLanguage('ar')" class="lang-btn">
+                <span class="lang-name">العربية - arabic</span>
+            </button>
+            <button onclick="changeLanguage('en')" class="lang-btn">
+                <span class="lang-name">English - الإنجليزية</span>
+            </button>
+            <button onclick="changeLanguage('fr')" class="lang-btn">
+                <span class="lang-name">Français - الفرنسية</span>
+            </button>
+        </div>
+
+        <div class="qr-generator">
+            <div class="input-group">
+                <input type="text" id="imageUrl" placeholder="أدخل رابط هنا">
+                <button id="generateBtn" onclick="generateQR()">
+                    <i class="fas fa-magic"></i> إنشاء رمز QR
+                </button>
+            </div>
+            <div id="qrResult">
+                <img id="qrImage" style="display: none;" alt="QR Code">
+            </div>
+        </div>
+
+        <footer>
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة © فريق بدر</p>
+                <div class="social-links">
+                    <a href="https://discord.gg/sZsyD7yFAg" target="_blank" class="discord-link">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCg3I1kBuMAP3sc7uK0HOTTQ" target="_blank" class="youtube-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
